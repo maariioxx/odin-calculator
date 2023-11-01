@@ -1,0 +1,99 @@
+body {
+    background-color: #191919;
+    color: whitesmoke;
+    font-family: Roboto, sans-serif;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    
+}
+
+.calculator {
+    border: 3px solid #9FD5D1;
+    width: 360px;
+    border-radius: 16px; 
+}
+.screen {
+    border-bottom: 3px solid #9FD5D1;
+}
+.display {
+    margin: 20px 30px;
+    
+}
+.input, .output {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+.input {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.output {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0 30px;
+    
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    background-color: #191919;
+    border: 1px solid #9FD5D1;
+    border-radius: 16px;
+    color: #9FD5D1;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background-color: #171717;
+    border: 2px solid #9FD5D1;
+
+}
+
+.bigButton {
+    width: 148px;
+    height: 70px;
+    background-color: #9FD5D1;
+    border: 1px solid #191919;
+    color: #191919
+}
+
+.bigButton:hover{
+    background-color: #9FD4D1;
+    border: 2px solid #191919
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+    color: #9FD4D1;
+}
+#github-logo {
+    width: 20px;
+    height: 20px;
+}
+
+a {
+    color: #9FD4D1;
+    text-decoration: none;
+}
