@@ -2,6 +2,7 @@ let number1 = 0;
 let number2 = 0;
 let operator;
 let operatorClicked = false;
+let decimalClicked = false;
 
 
 function add(number1, number2){
@@ -35,6 +36,7 @@ const output = document.querySelector(".output");
 const operatorButtons = document.querySelectorAll(".operator");
 const equalButton = document.querySelector(".equal");
 const clearButton = document.querySelector(".clear")
+const decimalButton = document.querySelector(".decimalPoint")
 
 numberButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -52,13 +54,22 @@ operatorButtons.forEach(button => {
             input.textContent = output.textContent
             output.textContent = "";
             operatorClicked = false;
+            decimalClicked = false;
         }
         operator = button.innerHTML;
         updateDisplay();
         operatorClicked = true;
-        
+        decimalClicked = false;
     })
 });
+
+decimalButton.addEventListener("click", () => {
+    if ((operatorClicked === true && decimalClicked === false) || decimalClicked  === false){
+            input.textContent += ".";
+            decimalClicked = true;
+        }    
+    });
+
 
 equalButton.addEventListener("click", () => {
     if(operator === undefined){
@@ -90,5 +101,7 @@ function clear(){
     operator = "";
     input.textContent = "";
     output.textContent = "";
+    operatorClicked = false;
+    decimalClicked = false;
 }
 
