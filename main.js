@@ -18,7 +18,11 @@ function subtract(number1, number2){
 }
 
 function divide(number1, number2){
+    if(number2 == "0"){
+        return "Can't divide by 0. Please clear"
+    } else {
     return number1 / number2;
+    }
 }
 
 function operate(number1, number2){
@@ -36,7 +40,8 @@ const output = document.querySelector(".output");
 const operatorButtons = document.querySelectorAll(".operator");
 const equalButton = document.querySelector(".equal");
 const clearButton = document.querySelector(".clear")
-const decimalButton = document.querySelector(".decimalPoint")
+const decimalButton = document.querySelector(".decimalPoint");
+const deleteButton = document.querySelector(".delete");
 
 numberButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -50,7 +55,7 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
     button.addEventListener("click", () => {
-        if(output.textContent !== ""){
+        if(output.textContent !== ""){ /* If there's already been an operation */
             input.textContent = output.textContent
             output.textContent = "";
             operatorClicked = false;
@@ -82,6 +87,10 @@ equalButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", clear);
 
+deleteButton.addEventListener("click", () => {
+    input.textContent = input.textContent.slice(0, -1);
+})
+
 function updateDisplay(){
     if(operatorClicked === false){
         input.textContent += operator;
@@ -105,3 +114,5 @@ function clear(){
     decimalClicked = false;
 }
 
+/* Añadir botón de borrar, solucionar bug al pulsar el = con un . sin decimales,
+redondear si hay muchos decimales y añadir soporte para teclado */
