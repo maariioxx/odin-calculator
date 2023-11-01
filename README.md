@@ -1,1 +1,1 @@
-# odin-calculator
+I'm going to create a calculator app using HTML, CSS, Flexbox & JavaScript.
