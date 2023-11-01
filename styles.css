@@ -4,7 +4,6 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-
 .main{
     display: flex;
     justify-content: center;
@@ -18,13 +17,16 @@ body {
     width: 360px;
     border-radius: 16px; 
 }
+
 .screen {
     border-bottom: 3px solid #9FD5D1;
 }
+
 .display {
     margin: 20px 30px;
     
 }
+
 .input, .output {
     height: 40px;
     display: flex;
@@ -42,6 +44,7 @@ body {
     font-size: 3em;
     margin-bottom: 15px;
 }
+
 .keys {
     display: flex;
     flex-wrap: wrap;
@@ -73,12 +76,12 @@ button:hover{
     height: 70px;
     background-color: #9FD5D1;
     border: 1px solid #191919;
-    color: #191919
+    color: #191919;
 }
 
 .bigButton:hover{
     background-color: #9FD4D1;
-    border: 2px solid #191919
+    border: 2px solid #191919;
 }
 
 footer {
@@ -88,6 +91,7 @@ footer {
     gap: 5px;
     color: #9FD4D1;
 }
+
 #github-logo {
     width: 20px;
     height: 20px;
