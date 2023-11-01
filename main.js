@@ -19,7 +19,7 @@ function subtract(number1, number2){
 
 function divide(number1, number2){
     if(number2 == "0"){
-        return "Can't divide by 0. Please clear"
+        return "∞"
     } else {
     return number1 / number2;
     }
@@ -51,6 +51,15 @@ function getNumberButtons(button){
     } else {
         input.textContent += button.id;
     };
+    while(input.innerHTML.length > 22){
+        input.textContent = Number(input.textContent).toFixed(20);
+        if(input.textContent == "NaN"){
+            input.textContent = "∞ | Calculator clearing"; 
+            setTimeout(clear, 1500)
+            break;
+        }
+        break;
+    }
 };
 
 
@@ -106,7 +115,7 @@ equalButton.addEventListener("click", getEqualButton);
 
 clearButton.addEventListener("click", clear);
 
-deleteButton.addEventListener("click", deleteInput());
+deleteButton.addEventListener("click", deleteInput);
 
 
 function updateDisplay(){
